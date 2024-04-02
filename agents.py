@@ -21,7 +21,7 @@ class FactsGenerator:
                 model_name="AlphJain/llm",
                 device_map="auto",
                 # Uncomment the following line if leveraging CUDA for reduced memory usage
-                model_kwargs={"torch_dtype": torch.float16}
+                model_kwargs={"torch_dtype":torch.float16, "load_in_8bit":True}
         )
         self.embed_model = LangchainEmbedding(HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2"))
         self.service_context=ServiceContext.from_defaults(chunk_size=1024, llm=self.model, embed_model=self.embed_model)
