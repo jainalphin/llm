@@ -2,9 +2,9 @@ pypdf
 accelerate
 einops
 langchain
-transformers==4.30
 sentence_transformers
 llama_index
+transformers
 llama-index-llms-huggingface
 llama-index-embeddings-langchain
 sentence_transformers
