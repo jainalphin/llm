@@ -10,4 +10,5 @@ llama-index-llms-huggingface
 llama-index-embeddings-langchain
 sentence_transformers
 BeautifulSoup
+streamlit
 
