@@ -1,0 +1,13 @@
+pypdf
+accelerate
+einops
+langchain
+https://pypi.org/simple/ bitsandbytes
+transformers==4.30
+sentence_transformers
+llama_index
+llama-index-llms-huggingface
+llama-index-embeddings-langchain
+sentence_transformers
+BeautifulSoup
+
