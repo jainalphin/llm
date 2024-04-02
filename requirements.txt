@@ -2,7 +2,6 @@ pypdf
 accelerate
 einops
 langchain
-https://pypi.org/simple/ bitsandbytes
 transformers==4.30
 sentence_transformers
 llama_index
