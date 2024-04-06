@@ -10,10 +10,11 @@ from preprocess import process_data
 added_color = "green"
 removed_color = "red"
 
-agent = FactsGenerator()
+agent = None
 
 
 if 'question_answers' not in st.session_state:
+    st.session_state['agent'] = FactsGenerator()
     st.session_state['question_answers'] = []
 
 # Instantiate FactsGenerator
@@ -97,7 +98,7 @@ def document_addition_screen():
             # Processing the data
             with st.spinner('Processing...'):
                 url = input_text.split("\n")
-                processed_result = agent.process_data(url, question)
+                processed_result = st.session_state['agent'].process_data(url, question)
                 for date, facts in processed_result.items():
                     st.subheader(f"Date: {date}")  # Display the date retrieved from the data
 
