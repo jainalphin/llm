@@ -106,6 +106,7 @@ class FactsGenerator:
             response = query_engine.query(self.fact_prompt.format(question=query))
             facts[date] = response.response
 
+        print(facts)
         contradiction_facts = {}
         for id, key in enumerate(facts):
             # Create a separate index for each document
@@ -120,7 +121,7 @@ class FactsGenerator:
             response = query_engine.query(self.contradiction_prompt.format(previous_facts=previous_facts,
                                                                            current_facts=facts[key]))
             contradiction_facts[key] = response.response
-
+        print(contradiction_facts)
         return contradiction_facts
 
 
