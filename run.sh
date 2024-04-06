@@ -13,6 +13,9 @@ wget -O model.safetensors.index.json https://huggingface.co/AlphJain/llm/resolve
 wget -O config.json https://huggingface.co/AlphJain/llm/resolve/main/config.json?download=true
 wget -O generation_config.json https://huggingface.co/AlphJain/llm/resolve/main/generation_config.json?download=true
 
+cd models
+mkdir model && mkdir tokenizer
+cd ..
 
 mv $PWD/model-00001-of-00002.safetensors $PWD/models/model/model-00001-of-00002.safetensors
 mv $PWD/model-00002-of-00002.safetensors $PWD/models/model/model-00002-of-00002.safetensors
