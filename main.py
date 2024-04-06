@@ -10,12 +10,12 @@ from preprocess import process_data
 added_color = "green"
 removed_color = "red"
 
-agent = None
-
 
 if 'question_answers' not in st.session_state:
-    st.session_state['agent'] = FactsGenerator()
     st.session_state['question_answers'] = []
+
+if 'agent' not in st.session_state:
+    st.session_state['agent'] = FactsGenerator()
 
 # Instantiate FactsGenerator
 # facts_generator = FactsGenerator()
