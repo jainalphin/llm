@@ -17,8 +17,8 @@ class FactsGenerator:
                 context_window=4096,
                 max_new_tokens=256,
                 generate_kwargs={"temperature": 0.0, "do_sample": False},
-                tokenizer_name="AlphJain/llm",
-                model_name="AlphJain/llm",
+                tokenizer_name="models/tokenizer",
+                model_name="models/model",
                 device_map="auto",
                 # Uncomment the following line if leveraging CUDA for reduced memory usage
                 model_kwargs={"torch_dtype":torch.float16, "load_in_4bit":True}
